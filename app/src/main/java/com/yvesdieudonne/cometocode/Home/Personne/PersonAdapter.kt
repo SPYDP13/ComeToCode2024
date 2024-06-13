@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.google.android.material.textfield.TextInputEditText
 import com.yvesdieudonne.cometocode.R
 
-class PersonAdapter(var personList:MutableList<PersonneModel>,var mContext:AppCompatActivity): RecyclerView.Adapter<personVH>() {
+class PersonAdapter(var personList:MutableList<PersonneModel>, var mContext:AppCompatActivity): RecyclerView.Adapter<personVH>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): personVH {
         var itemView = LayoutInflater.from(mContext).inflate(R.layout.personne_rv, parent, false)
         return personVH(itemView)
@@ -44,7 +44,7 @@ class personVH(itemView:View): ViewHolder(itemView){
         date.text = person.DateDisparition
         prime.text = "${person.prime} FCFA"
         desc.text = person.displayText
-        description.setText(person.Description)
+//        description.setText(person.Description)
         image.setImageResource(person.photoLists[0])
     }
 }
