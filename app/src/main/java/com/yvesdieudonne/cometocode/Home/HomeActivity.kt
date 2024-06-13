@@ -4,9 +4,14 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.Person
 import androidx.recyclerview.widget.RecyclerView
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import com.yvesdieudonne.cometocode.Engins.EnginsRecherche.EnginsRecherche
 import com.yvesdieudonne.cometocode.Home.Engins.EnginAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
@@ -18,6 +23,9 @@ import com.yvesdieudonne.cometocode.R
 class HomeActivity : AppCompatActivity() {
     lateinit var personRv: RecyclerView
     lateinit var enginRv: RecyclerView
+    lateinit var menuIV: ImageView
+    lateinit var menuCL: ConstraintLayout
+    lateinit var closeMenuIV: ImageView
 
     lateinit var personneVoirPlus:Button
     lateinit var enginVoirPlus:Button
@@ -32,6 +40,9 @@ class HomeActivity : AppCompatActivity() {
         enginRv = findViewById(R.id.enginRv)
         personneVoirPlus = findViewById(R.id.personneVoirPlus)
         enginVoirPlus = findViewById(R.id.enginVoirPlus)
+        menuIV = findViewById(R.id.menuIV)
+        menuCL= findViewById(R.id.menuCL)
+        closeMenuIV= findViewById(R.id.closeMenuIV)
 
         /*Disposition des informations de la liste des personnes*/
         var personList = mutableListOf(
@@ -77,6 +88,26 @@ class HomeActivity : AppCompatActivity() {
             Intent(this, EnginsRecherche::class.java).also { startActivity(it) }
         }
 
+
+        /*Actionnement du menu*/
+        menuIV.setOnClickListener{
+            YoYo.with(Techniques.BounceInLeft)
+                .duration(1000)
+                .onStart { menuCL.visibility = View.VISIBLE }
+                .playOn(menuCL)
+        }
+        closeMenuIV.setOnClickListener{
+            YoYo.with(Techniques.FadeOutLeft)
+                .duration(1000)
+                .onEnd { menuCL.visibility = View.GONE }
+                .playOn(menuCL)
+        }
+        menuCL.setOnClickListener{
+            YoYo.with(Techniques.FadeOutLeft)
+                .duration(1000)
+                .onEnd { menuCL.visibility = View.GONE }
+                .playOn(menuCL)
+        }
 
     }
 }
