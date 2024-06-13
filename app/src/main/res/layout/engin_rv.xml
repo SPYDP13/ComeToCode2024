@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/aladin"
-                    android:text="Nom:"
+                    android:text="Matricule:"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/aladin"
-                    android:text="Sawadogo Yves Dieudoné"
+                    android:text="06 BF 5665"
                     android:textColor="@color/black"
                     android:textSize="16dp"
                     android:textStyle="bold" />
@@ -153,7 +153,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/aladin"
-                    android:text="Personne recherchée par sa famille"
+                    android:text="Engins recherchée par son propriétaire"
                     android:textAlignment="center"
 
                     android:textColor="@color/orange"
@@ -178,7 +178,7 @@
                         android:fontFamily="@font/aladin"
                         android:hint="description"
                         android:maxLines="4"
-                        android:text="Nous recherchons activement Sawadogo Yves Dieudonné, disparue depuis le 15 mai 2024. Elle a été vue pour la dernière fois dans la Zone du Bois. Sa famille et ses amis sont extrêmement inquiets et espèrent son retour sain et sauf." />
+                        android:text="Je soussigné(e) [Votre Nom], déclare la perte de ma moto immatriculée 06 BF 5665.  Elle a été vue pour la dernière fois le 15 mai 2024 dans la zone du Bois." />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
