@@ -8,14 +8,13 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.app.Person
 import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.yvesdieudonne.cometocode.Engins.EnginsRecherche.EnginsRecherche
 import com.yvesdieudonne.cometocode.Home.Engins.EnginAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
-import com.yvesdieudonne.cometocode.Home.Personne.EnginModel
+import com.yvesdieudonne.cometocode.Home.Engins.EnginModel
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
 import com.yvesdieudonne.cometocode.Personne.Personnes
 import com.yvesdieudonne.cometocode.R

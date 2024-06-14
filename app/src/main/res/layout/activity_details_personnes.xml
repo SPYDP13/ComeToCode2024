@@ -127,7 +127,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="5dp"
 
         android:foregroundGravity="bottom"
@@ -136,8 +136,7 @@
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScrollView2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -321,7 +320,7 @@
                             android:orientation="vertical"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/DescriptionTV">
+                            app:layout_constraintTop_toBottomOf="@id/divider11">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -352,7 +351,7 @@
                                     tools:ignore="UseAppTint" />
 
                                 <TextView
-                                    android:id="@+id/lieu"
+                                    android:id="@+id/DateTV"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -389,7 +388,7 @@
                                     tools:ignore="UseAppTint" />
 
                                 <TextView
-                                    android:id="@+id/DateTV"
+                                    android:id="@+id/LieuTV"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -455,6 +454,17 @@
                             app:layout_constraintTop_toTopOf="@+id/DescriptionTV"
                             app:srcCompat="@drawable/quote" />
 
+                        <View
+                            android:id="@+id/divider11"
+                            android:layout_width="390dp"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="8dp"
+                            android:background="?android:attr/listDivider"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/DescriptionTV" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -493,7 +503,7 @@
             android:layout_marginEnd="8dp"
             android:backgroundTint="@color/bleu"
             android:fontFamily="@font/aladin"
-            android:text="J'ai des infos sur cette personne"
+            android:text="J'ai des infos ..."
             app:cornerRadius="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/DetailsNomTV"
             app:layout_constraintEnd_toEndOf="parent"

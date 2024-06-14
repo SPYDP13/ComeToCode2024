@@ -38,6 +38,7 @@ class personVH(itemView:View, var mContext: AppCompatActivity): ViewHolder(itemV
     fun inflatePerson(person:PersonneModel){
         var nom:TextView = itemView.findViewById(R.id.nameTv)
         var date:TextView = itemView.findViewById(R.id.dateTv)
+        var numberPhotoTV:TextView = itemView.findViewById(R.id.numberPhotoTV)
         var prime:TextView = itemView.findViewById(R.id.primeTv)
         var desc:TextView = itemView.findViewById(R.id.descTv)
         var description:TextInputEditText = itemView.findViewById(R.id.descriptionTIET)
@@ -46,15 +47,17 @@ class personVH(itemView:View, var mContext: AppCompatActivity): ViewHolder(itemV
 
         nom.text = person.nomPrenom
         date.text = person.DateDisparition
-        prime.text = "${person.prime} FCFA"
+//        prime.text = "${person.prime} FCFA"
         desc.text = person.displayText
 //        description.setText(person.Description)
+        numberPhotoTV.text = "+${person.photoLists.size-1} photos"
         image.setImageResource(person.photoLists[0])
 
         detailMB.setOnClickListener {
             Intent(mContext, DetailsPersonnes::class.java).also{
                 it.putExtra("nom", person.nomPrenom)
                 it.putExtra("date", person.DateDisparition)
+                it.putExtra("lieu", person.DernierLieu)
                 it.putExtra("prime", person.prime)
                 it.putExtra("displayText", person.displayText)
                 it.putExtra("description", person.Description)

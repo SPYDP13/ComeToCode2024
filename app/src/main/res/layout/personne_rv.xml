@@ -32,7 +32,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/numberPhotoTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#6F000000"
@@ -133,10 +133,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/aladin"
-                    android:text="10000 Fcfa"
+                    android:text="Possibilié de prime"
                     android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
             </LinearLayout>
 
             <LinearLayout

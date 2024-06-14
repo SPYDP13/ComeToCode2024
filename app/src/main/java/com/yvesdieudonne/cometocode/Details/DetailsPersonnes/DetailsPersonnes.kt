@@ -23,6 +23,10 @@ class DetailsPersonnes : AppCompatActivity() {
     lateinit var DetailsNomTV:TextView
     lateinit var DetailSIV:ShapeableImageView
     lateinit var displayTextTV:TextView
+    lateinit var DateTV:TextView
+    lateinit var LieuTV:TextView
+    lateinit var PrimeTV:TextView
+
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +36,7 @@ class DetailsPersonnes : AppCompatActivity() {
         /*Recuperation des valeurs des intents */
         val nom = intent.getStringExtra("nom")
         val date = intent.getStringExtra("date")
+        val lieu = intent.getStringExtra("lieu")
         val prime = intent.getLongExtra("prime", 0)
         val displayText = intent.getStringExtra("displayText")
         val description = intent.getStringExtra("description")
@@ -48,11 +53,18 @@ class DetailsPersonnes : AppCompatActivity() {
         DetailsNomTV= findViewById(R.id.DetailsNomTV)
         DetailSIV= findViewById(R.id.DetailSIV)
         displayTextTV= findViewById(R.id.displayTextTV)
+        DateTV = findViewById(R.id.DateTV)
+        LieuTV = findViewById(R.id.LieuTV)
+        PrimeTV = findViewById(R.id.PrimeTV)
 
         /*Initialisation des information de la personnes disparue concernée*/
         DetailsNomTV.text = nom
         DetailSIV.setImageResource(image!![0])
         displayTextTV.text = displayText
+        DateTV.text = date
+        LieuTV.text = lieu
+//        PrimeTV.text = ""
+
 
         /*Affichage des photos du RecyclerView*/
         val imgList:MutableList<Int> = mutableListOf()

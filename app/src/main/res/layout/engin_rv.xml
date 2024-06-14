@@ -32,7 +32,7 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/numberPhotoTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#6F000000"
@@ -133,10 +133,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/aladin"
-                    android:text="10000 Fcfa"
+                    android:text="Possibilité de prime"
                     android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
+                    android:textSize="16dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -178,7 +177,7 @@
                         android:fontFamily="@font/aladin"
                         android:hint="description"
                         android:maxLines="4"
-                        android:text="Je soussigné(e) [Votre Nom], déclare la perte de ma moto immatriculée 06 BF 5665.  Elle a été vue pour la dernière fois le 15 mai 2024 dans la zone du Bois." />
+                        android:text="Je déclare la perte de ma moto immatriculée 06 BF 5665.  Elle a été vue pour la dernière fois le 15 mai 2024 à Belle Ville." />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </LinearLayout>
@@ -188,6 +187,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:fontFamily="@font/aladin"
             android:text="Details"
             app:backgroundTint="@color/bleu"
             app:cornerRadius="8dp"
