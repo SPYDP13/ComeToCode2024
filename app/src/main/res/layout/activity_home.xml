@@ -124,6 +124,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:backgroundTint="@color/black"
+                                android:fontFamily="@font/aladin"
                                 android:text="Voir plus"
                                 app:cornerRadius="5dp"
                                 app:icon="@drawable/right"

@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.google.android.material.imageview.ShapeableImageView
+import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
 import com.yvesdieudonne.cometocode.R
 
 class DetailsPersonnes : AppCompatActivity() {
@@ -17,6 +20,10 @@ class DetailsPersonnes : AppCompatActivity() {
     lateinit var menuCL: ConstraintLayout
     lateinit var closeMenuIV: ImageView
     lateinit var detailPhotoRV: RecyclerView
+    lateinit var DetailsNomTV:TextView
+    lateinit var DetailSIV:ShapeableImageView
+    lateinit var displayTextTV:TextView
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,12 +45,21 @@ class DetailsPersonnes : AppCompatActivity() {
         menuCL= findViewById(R.id.menuCL)
         closeMenuIV= findViewById(R.id.closeMenuIV)
         detailPhotoRV= findViewById(R.id.detailPhotoRV)
+        DetailsNomTV= findViewById(R.id.DetailsNomTV)
+        DetailSIV= findViewById(R.id.DetailSIV)
+        displayTextTV= findViewById(R.id.displayTextTV)
+
+        /*Initialisation des information de la personnes disparue concernée*/
+        DetailsNomTV.text = nom
+        DetailSIV.setImageResource(image!![0])
+        displayTextTV.text = displayText
 
         /*Affichage des photos du RecyclerView*/
         val imgList:MutableList<Int> = mutableListOf()
-        for (img in image!!){
+        for (img in image){
             imgList.add(img)
         }
+        var Personne = PersonneModel(nom!!, date!!, displayText!!, prime, description!!, Contact!!, imgList)
         val adapter = DetailsPersonnesAdapter(imgList,this)
         detailPhotoRV.apply {
             layoutManager = GridLayoutManager(this@DetailsPersonnes, 3)

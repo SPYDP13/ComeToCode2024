@@ -9,5 +9,6 @@ data class PersonneModel(
     var prime:Long,
     var Description: String,
     var Contact: String,
-    var photoLists: MutableList<Int>
+    var photoLists: MutableList<Int>,
+    var DernierLieu:String = "Zone du bois, Ouagadougou"
 )
