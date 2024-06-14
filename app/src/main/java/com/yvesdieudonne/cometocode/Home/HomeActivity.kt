@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.yvesdieudonne.cometocode.Engins.EnginsRecherche.EnginsRecherche
+import com.yvesdieudonne.cometocode.Engins.EnginsRecherche.ListDesEnginsRecherche.ListDesEnginsRecherche
 import com.yvesdieudonne.cometocode.Home.Engins.EnginAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
 import com.yvesdieudonne.cometocode.Home.Engins.EnginModel
@@ -68,23 +69,23 @@ class HomeActivity : AppCompatActivity() {
 
         /*Disposition des informations de la liste des engins*/
         var enginList = mutableListOf(
-            EnginModel("06 BF 5478", "15 Mai 2024", "Personne recherchée par sa famille", 50000, "", "+226 55220706",
+            EnginModel("06 BF 5478", "15 Mai 2024", "Engin recherché par son proprietaire", 50000, "", "+226 55220706",
                 mutableListOf(R.drawable.engin1, R.drawable.engin2, R.drawable.engin3)
             ),
-            EnginModel("10 BF 5952", "18 Mai 2024", "Personne retrouvées par un citoyen", 10000, "", "+226 55220706",
+            EnginModel("10 BF 5952", "18 Mai 2024", "Engin recherché par son proprietaire", 10000, "", "+226 55220706",
                 mutableListOf(R.drawable.engin2, R.drawable.engin1, R.drawable.engin3)
             ),
-            EnginModel("11 SR 5478", "16 Juin 2024", "Personne recherchée par sa famille", 0, "", "+226 55220706",
+            EnginModel("11 SR 5478", "16 Juin 2024", "Engin recherché par son proprietaire", 0, "", "+226 55220706",
                 mutableListOf(R.drawable.engin3, R.drawable.engin1, R.drawable.engin2)
             ),
-            EnginModel("12 BF 5789", "16 Juin 2024", "Personne retrouvées par un citoyen", 0, "", "+226 55220706",
+            EnginModel("12 BF 5789", "16 Juin 2024", "Engin recherché par son proprietaire", 0, "", "+226 55220706",
                 mutableListOf(R.drawable.engin1, R.drawable.engin2, R.drawable.engin3)
             )
         )
         var enginAdapater:EnginAdapter = EnginAdapter(enginList, this)
         enginRv.adapter = enginAdapater
         enginVoirPlus.setOnClickListener {
-            Intent(this, EnginsRecherche::class.java).also { startActivity(it) }
+            Intent(this, ListDesEnginsRecherche::class.java).also { startActivity(it) }
         }
 
 

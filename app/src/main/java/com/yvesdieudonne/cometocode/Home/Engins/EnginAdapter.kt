@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.yvesdieudonne.cometocode.Details.DetailsEngins.DetailsEngins
 import com.yvesdieudonne.cometocode.R
@@ -39,13 +40,13 @@ class EnginAdapter(var enginList:MutableList<EnginModel>, var mContext:AppCompat
             var desc:TextView = itemView.findViewById(R.id.descTv)
             var description:TextInputEditText = itemView.findViewById(R.id.descriptionTIET)
             var image: ImageView = itemView.findViewById(R.id.imageIV)
-            var detailMB: ImageView = itemView.findViewById(R.id.detailMB)
+            var detailMB: MaterialButton = itemView.findViewById(R.id.detailMB)
 
             nom.text = engin.Imatriculation
             date.text = engin.DateDisparition
 //            prime.text = "${engin.prime} FCFA"
             desc.text = engin.displayText
-//            description.setText(engin.Description)
+            description.setText(engin.Description)
             numberPhotoTV.text = "+${engin.photoLists.size-1} photos"
             image.setImageResource(engin.photoLists[0])
 

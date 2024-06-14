@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Personne.Personnes">
+    tools:context=".Personne.PersonneRetrouves.ListDesPersonnesRetrouves.ListDesPersonnesRetrouves">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/aladin"
-                    android:text="Liste des personnes disparues"
+                    android:text="Liste des personnes retrouvées"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="16sp"
@@ -213,7 +213,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_marginBottom="8dp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/optionsFab"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -230,12 +230,12 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <Button
-                    android:id="@+id/personneRetrouveBtn"
+                    android:id="@+id/personneDisparuBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/bleu"
                     android:fontFamily="@font/aladin"
-                    android:text="Personnes retrouvées"
+                    android:text="Personnes disparues"
                     android:textColor="@color/black"
                     app:cornerRadius="5dp" />
 
@@ -255,7 +255,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/bleu"
                     android:fontFamily="@font/aladin"
-                    android:text="Declaration de disparition"
+                    android:text="Declaration de Retrouvailes"
                     android:textColor="@color/black"
                     app:cornerRadius="5dp"
                     app:icon="@android:drawable/ic_input_add"

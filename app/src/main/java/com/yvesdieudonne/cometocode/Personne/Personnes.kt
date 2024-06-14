@@ -15,7 +15,9 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
+import com.yvesdieudonne.cometocode.Personne.PersonneRetrouves.ListDesPersonnesRetrouves.ListDesPersonnesRetrouves
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.DeclarationPersonneRecherche
+import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.ListDesPersonnesRecherche.ListDesPersonnesRecherche
 import com.yvesdieudonne.cometocode.R
 
 class Personnes : AppCompatActivity() {
@@ -26,6 +28,7 @@ class Personnes : AppCompatActivity() {
     lateinit var menuCL: ConstraintLayout
     lateinit var closeMenuIV: ImageView
     lateinit var nouvelleDeclarationBtn: Button
+    lateinit var personneRetrouveBtn: Button
     var optionIsActive:Boolean = false
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,22 +43,16 @@ class Personnes : AppCompatActivity() {
         menuCL= findViewById(R.id.menuCL)
         closeMenuIV= findViewById(R.id.closeMenuIV)
         nouvelleDeclarationBtn= findViewById(R.id.nouvelleDeclarationBtn)
+        personneRetrouveBtn= findViewById(R.id.personneRetrouveBtn)
 
 
         /*Disposition des informations de la liste des personnes*/
         var personList = mutableListOf(
-            PersonneModel("Sawadogo Yves Dieudonne", "15 Mai 2024", "Personne recherchée par sa famille", 50000, "", "+226 55220706",
-                mutableListOf(R.drawable.personne1, R.drawable.personne2, R.drawable.personne3)
+            PersonneModel("Sawadogo Yves Dieudonne", "15 Mai 2024", "Personne recherchée par sa famille", 50000, "Nous recherchons activement Sawadogo Yves Dieudonné, disparue depuis le 15 mai 2024. il a été vu pour la dernière fois dans la Zone du Bois. Sa famille et ses amis sont extrêmement inquiets et espèrent son retour sain et sauf.  Si vous avez des informations concernant sa disparition ou si vous l'avez aperçue, veuillez nous le signaler immediatement sur la plateformes s'il vous plait.  Merci de votre aide et de votre solidarité.", "+226 55220706", mutableListOf(R.drawable.personne1, R.drawable.personne2, R.drawable.personne3)
             ),
-            PersonneModel("Sawadogo Djémine Somzy", "18 Mai 2024", "Personne retrouvées par un citoyen", 10000, "", "+226 55220706",
-                mutableListOf(R.drawable.personne4, R.drawable.personne5, R.drawable.personne6)
-            ),
-            PersonneModel("David Danaye", "16 Juin 2024", "Personne recherchée par sa famille", 0, "", "+226 55220706",
+            PersonneModel("David Danaye", "16 Juin 2024", "Personne recherchée par sa famille", 0, "Nous recherchons activement Danaye David, disparue depuis le 16 juin 2024. il a été vu pour la dernière fois dans la Zone du Bois. Sa famille et ses amis sont extrêmement inquiets et espèrent son retour sain et sauf.  Si vous avez des informations concernant sa disparition ou si vous l'avez aperçue, veuillez nous le signaler immediatement sur la plateformes s'il vous plait.  Merci de votre aide et de votre solidarité.", "+226 55220706",
                 mutableListOf(R.drawable.personne7, R.drawable.personne8, R.drawable.personne9)
             ),
-            PersonneModel("Yankine Eliel", "16 Juin 2024", "Personne retrouvées par un citoyen", 0, "", "+226 55220706",
-                mutableListOf(R.drawable.personne1, R.drawable.personne2, R.drawable.personne3)
-            )
         )
 
         var personAdapter = PersonAdapter(personList, this)
@@ -117,6 +114,11 @@ class Personnes : AppCompatActivity() {
        /*Buttons*/
         nouvelleDeclarationBtn.setOnClickListener {
             Intent(this, DeclarationPersonneRecherche::class.java).also {
+                startActivity(it)
+            }
+        }
+        personneRetrouveBtn.setOnClickListener {
+            Intent(this, ListDesPersonnesRetrouves::class.java).also {
                 startActivity(it)
             }
         }
