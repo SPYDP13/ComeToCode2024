@@ -27,7 +27,7 @@
             app:cardCornerRadius="20dp"
             app:contentPaddingLeft="8dp"
             app:contentPaddingRight="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/profilSIV"
             app:layout_constraintStart_toEndOf="@+id/menuIV"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -46,7 +46,7 @@
             app:srcCompat="@drawable/baseline_menu_24" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/profilSIV"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/gray"
@@ -298,7 +298,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#C9000000"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -372,7 +372,7 @@
                         android:id="@+id/PersonneBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/orange"
+                        android:backgroundTint="@color/bleu"
                         android:fontFamily="@font/aladin"
                         android:text="Personnes"
                         android:textSize="16sp"
@@ -384,7 +384,7 @@
                         android:id="@+id/EnginBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/bleu"
+                        android:backgroundTint="@color/orange"
                         android:fontFamily="@font/aladin"
                         android:text="Engin"
                         android:textSize="16sp"

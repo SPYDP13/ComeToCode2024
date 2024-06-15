@@ -13,6 +13,7 @@ import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.google.android.material.imageview.ShapeableImageView
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
+import com.yvesdieudonne.cometocode.MenuNavigation
 import com.yvesdieudonne.cometocode.R
 
 class DetailsPersonnes : AppCompatActivity() {
@@ -42,6 +43,9 @@ class DetailsPersonnes : AppCompatActivity() {
         val description = intent.getStringExtra("description")
         val Contact = intent.getStringExtra("Contact")
         val image = intent.getIntArrayExtra("image")
+
+        /*Gestion du menu de navigation*/
+        MenuNavigation(this)
 
 
 

@@ -17,6 +17,7 @@ import com.yvesdieudonne.cometocode.Home.Engins.EnginAdapter
 import com.yvesdieudonne.cometocode.Home.Engins.EnginModel
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
+import com.yvesdieudonne.cometocode.MenuNavigation
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.DeclarationPersonneRecherche
 import com.yvesdieudonne.cometocode.R
 
@@ -42,6 +43,9 @@ class ListDesEnginsRecherche : AppCompatActivity() {
         menuCL= findViewById(R.id.menuCL)
         closeMenuIV= findViewById(R.id.closeMenuIV)
         nouvelleDeclarationBtn= findViewById(R.id.nouvelleDeclarationBtn)
+
+        /*Initialisation du menu*/
+        MenuNavigation(this)
 
 
         /*Disposition des informations de la liste des personnes*/

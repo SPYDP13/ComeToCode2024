@@ -16,6 +16,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.yvesdieudonne.cometocode.MenuNavigation
 import com.yvesdieudonne.cometocode.R
 
 class DeclarationPersonneRecherche : AppCompatActivity() {
@@ -43,6 +44,9 @@ class DeclarationPersonneRecherche : AppCompatActivity() {
         dateETD = findViewById(R.id.dateETD)
 
         val bitmapList = mutableListOf<Bitmap>()
+
+        /*Initialisation du menu*/
+        MenuNavigation(this)
 
 
         /*Actionnement de la vue du calendrier*/

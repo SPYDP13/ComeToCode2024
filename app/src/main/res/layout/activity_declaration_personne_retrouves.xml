@@ -28,7 +28,7 @@
             app:cardCornerRadius="20dp"
             app:contentPaddingLeft="8dp"
             app:contentPaddingRight="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/profilSIV"
             app:layout_constraintStart_toEndOf="@+id/menuIV"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -47,7 +47,7 @@
             app:srcCompat="@drawable/baseline_menu_24" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/profilSIV"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/gray"

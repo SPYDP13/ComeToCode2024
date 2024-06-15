@@ -17,6 +17,7 @@ import com.yvesdieudonne.cometocode.Home.Engins.EnginAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
 import com.yvesdieudonne.cometocode.Home.Engins.EnginModel
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
+import com.yvesdieudonne.cometocode.MenuNavigation
 import com.yvesdieudonne.cometocode.Personne.Personnes
 import com.yvesdieudonne.cometocode.R
 
@@ -34,6 +35,8 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        /*Initialisation du menu*/
+        MenuNavigation(this)
 
         /*Initialisation des views*/
         personRv = findViewById(R.id.personRv)
@@ -43,6 +46,8 @@ class HomeActivity : AppCompatActivity() {
         menuIV = findViewById(R.id.menuIV)
         menuCL= findViewById(R.id.menuCL)
         closeMenuIV= findViewById(R.id.closeMenuIV)
+
+
 
         /*Disposition des informations de la liste des personnes*/
         var personList = mutableListOf(

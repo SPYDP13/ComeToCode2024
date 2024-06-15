@@ -21,6 +21,7 @@ import com.daimajia.androidanimations.library.YoYo
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
+import com.yvesdieudonne.cometocode.MenuNavigation
 import com.yvesdieudonne.cometocode.Personne.PersonneRetrouves.DeclarationPersonneRetrouves.DeclarationPersonneRetrouves
 import com.yvesdieudonne.cometocode.Personne.Personnes
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.DeclarationPersonneRecherche
@@ -45,7 +46,8 @@ class ListDesPersonnesRetrouves : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_des_personnes_retrouves)
 
-
+        /*Initialisation du menu*/
+        MenuNavigation(this)
         /*Recuperation des Views*/
         RV = findViewById(R.id.RV)
         optionsCL = findViewById(R.id.optionsCL)
@@ -55,6 +57,8 @@ class ListDesPersonnesRetrouves : AppCompatActivity() {
         closeMenuIV= findViewById(R.id.closeMenuIV)
         nouvelleDeclarationBtn= findViewById(R.id.nouvelleDeclarationBtn)
         personneDisparuBtn= findViewById(R.id.personneDisparuBtn)
+
+
 
 
         /*Disposition des informations de la liste des personnes*/

@@ -16,6 +16,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.yvesdieudonne.cometocode.MenuNavigation
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.PhotoAdapter
 import com.yvesdieudonne.cometocode.R
 
@@ -42,6 +43,9 @@ class DeclarationEnginsRecherche : AppCompatActivity() {
         calendarView = findViewById(R.id.calendarView)
         OpenCalendarIB = findViewById(R.id.OpenCalendarIB)
         dateETD = findViewById(R.id.dateETD)
+
+        /*Initialisation du menu*/
+        MenuNavigation(this)
 
         val bitmapList = mutableListOf<Bitmap>()
 

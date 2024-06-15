@@ -15,6 +15,7 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
+import com.yvesdieudonne.cometocode.MenuNavigation
 import com.yvesdieudonne.cometocode.Personne.PersonneRetrouves.ListDesPersonnesRetrouves.ListDesPersonnesRetrouves
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.DeclarationPersonneRecherche
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.ListDesPersonnesRecherche.ListDesPersonnesRecherche
@@ -34,6 +35,9 @@ class Personnes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personnes)
+
+        /*Initialisation du menu*/
+        MenuNavigation(this)
 
         /*Recuperation des Views*/
         RV = findViewById(R.id.RV)
