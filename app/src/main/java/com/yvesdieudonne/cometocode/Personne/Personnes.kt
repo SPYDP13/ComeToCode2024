@@ -11,14 +11,12 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
-import com.yvesdieudonne.cometocode.MenuNavigation
+import com.yvesdieudonne.cometocode.Home.Engins.MenuNavigation
 import com.yvesdieudonne.cometocode.Personne.PersonneRetrouves.ListDesPersonnesRetrouves.ListDesPersonnesRetrouves
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.DeclarationPersonneRecherche
-import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.ListDesPersonnesRecherche.ListDesPersonnesRecherche
 import com.yvesdieudonne.cometocode.R
 
 class Personnes : AppCompatActivity() {

@@ -21,7 +21,7 @@ class Connexion : AppCompatActivity() {
         HomeIV = findViewById(R.id.HomeIV)
 
         inscriptionTV.setOnClickListener {
-            Intent(this, Connexion::class.java).also{
+            Intent(this, Inscription::class.java).also{
                 startActivity(it)
             }
         }

@@ -16,7 +16,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
-import com.yvesdieudonne.cometocode.MenuNavigation
+import com.yvesdieudonne.cometocode.Home.Engins.MenuNavigation
 import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.PhotoAdapter
 import com.yvesdieudonne.cometocode.R
 

@@ -13,7 +13,7 @@ import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.google.android.material.imageview.ShapeableImageView
 import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
-import com.yvesdieudonne.cometocode.MenuNavigation
+import com.yvesdieudonne.cometocode.Home.Engins.MenuNavigation
 import com.yvesdieudonne.cometocode.R
 
 class DetailsPersonnes : AppCompatActivity() {

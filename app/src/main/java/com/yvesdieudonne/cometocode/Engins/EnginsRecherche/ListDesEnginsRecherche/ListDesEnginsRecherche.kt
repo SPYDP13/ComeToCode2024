@@ -15,10 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.yvesdieudonne.cometocode.Engins.EnginsRecherche.DeclarationEnginsRecherche.DeclarationEnginsRecherche
 import com.yvesdieudonne.cometocode.Home.Engins.EnginAdapter
 import com.yvesdieudonne.cometocode.Home.Engins.EnginModel
-import com.yvesdieudonne.cometocode.Home.Personne.PersonAdapter
-import com.yvesdieudonne.cometocode.Home.Personne.PersonneModel
-import com.yvesdieudonne.cometocode.MenuNavigation
-import com.yvesdieudonne.cometocode.Personne.PersonnesRecherche.DeclarationPersonneRecherche.DeclarationPersonneRecherche
+import com.yvesdieudonne.cometocode.Home.Engins.MenuNavigation
 import com.yvesdieudonne.cometocode.R
 
 class ListDesEnginsRecherche : AppCompatActivity() {

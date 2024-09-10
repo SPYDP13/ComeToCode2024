@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import com.yvesdieudonne.cometocode.ConnexionInscription.Connexion.Connexion
 import com.yvesdieudonne.cometocode.Home.HomeActivity
 import com.yvesdieudonne.cometocode.R
 
@@ -21,7 +22,7 @@ class Inscription : AppCompatActivity() {
         HomeIV = findViewById(R.id.HomeIV)
 
         connexionTV.setOnClickListener {
-            Intent(this, Inscription::class.java).also {
+            Intent(this, Connexion::class.java).also {
                 startActivity(it)
             }
         }
